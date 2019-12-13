@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "reactive",
+  "version": "1.0.0",
+  "description": "Fooling around with reactivity",
+  "main": "src/index.js",
+  "scripts": {
+    "serve": "http-server -c-1"
+  },
+  "author": "Daniel Hodvogner <dhodvogner@gmail.com>",
+  "license": "WTFPL",
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "http-server": "^0.12.0"
+  }
+}
