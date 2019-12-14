@@ -1,7 +1,6 @@
 import { reactive, watch, render, notify } from "../src/index.js";
 
 const state = reactive({
-  id: "basic",
   count: 0
 });
 

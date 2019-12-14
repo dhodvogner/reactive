@@ -2,13 +2,17 @@ import { reactive } from "./reactive.js";
 import { watch, notify } from "./watch.js";
 import { render } from "./render.js";
 
+/**
+ * Create an reactive component
+ * @param {*} context
+ */
 export const component = context => {
   const element = document.createElement("div");
-  element.id = context.id;
+  element.id = context.name;
   element.context = context;
 
   context.state = reactive({
-    id: context.id,
+    // TODO: deep copy!
     ...context.state
   });
 

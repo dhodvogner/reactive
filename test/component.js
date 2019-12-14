@@ -1,7 +1,7 @@
 import { component } from "../src/index.js";
 
 component({
-  id: "counter",
+  name: "counter",
   state: {
     count: 0
   },
@@ -14,7 +14,7 @@ component({
 });
 
 component({
-  id: "counter2",
+  name: "counter2",
   state: {
     count: 0
   },
@@ -22,8 +22,32 @@ component({
     return `
       <button @click="increment">+</button>
       <button @click="decrement">-</button>
-      <h1>${state.count}</h1>
+      <h3>${state.count}</h3>
       `;
+  },
+  increment() {
+    this.state.count++;
+  },
+  decrement() {
+    this.state.count--;
+  }
+});
+
+component({
+  name: "counter3",
+  state: {
+    count: 0
+  },
+  template(state) {
+    return `
+    <div class="buttons">
+      <button @click="increment">+</button>
+      <button @click="decrement">-</button>
+    </div>
+    <div class="number">
+      <h1>${state.count}</h1>
+    </div>
+    `;
   },
   increment() {
     this.state.count++;
